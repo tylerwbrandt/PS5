@@ -5,9 +5,9 @@
 #' 
 #' An object of class 'trapezoid' has the following slots:
 #' \itemize{
-#' \item \code{height} the length of the subintervals
-#' \item \code{base1} f(x_(i-1))
-#' \item \code{base2} f(x_i)
+#' \item \code{x} the x values
+#' \item \code{y} the evaluated f(x) values
+#' \item \code{area} estimated area under the curve
 #' }
 #' 
 #' @author Tyler Brandt: \email{brandttyler@wustl.edu}
@@ -16,14 +16,14 @@
 #' @export
 setClass(Class = "trapezoid",
          representation = representation(
-           height = "numeric",
-           base1 = "numeric",
-           base2 = "numeric"
+           x = "numeric",
+           y = "numeric",
+           area = "numeric"
          ),
          prototype = prototype(
-           height = c(),
-           base1 = c(),
-           base2 = c()
+           x = c(),
+           y = c(),
+           area = c()
          ))
 
 #' @export
