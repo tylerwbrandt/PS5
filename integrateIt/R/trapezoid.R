@@ -26,4 +26,10 @@ setClass(class = "trapezoid",
            base2 = c()
          ))
 
+#' @export
+setMethod("initialize", "trapezoid",
+          function(.Object, ...){
+            value = callNextMethod()
+            return (value)
+          })
 
