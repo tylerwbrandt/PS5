@@ -14,7 +14,7 @@
 #' @aliases trapezoid-class initialize
 #' @rdname trapezoid
 #' @export
-setClass(class = "trapezoid",
+setClass(Class = "trapezoid",
          representation = representation(
            height = "numeric",
            base1 = "numeric",
