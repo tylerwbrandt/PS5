@@ -27,7 +27,7 @@ setGeneric(name = "integrateIt",
 
 #' @export
 setMethod("integrateIt",
-          function(x, y, rule, ...){
+          definition = function(x, y, rule, ...){
             a <- min(x)
             b <- max(x)
             h <- (b-a)/length(x)
