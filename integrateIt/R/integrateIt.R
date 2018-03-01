@@ -35,6 +35,7 @@ setMethod("integrateIt",
             if (identical(rule, "Trap")){
               area_sum <- sum(2*y)-a-b
               area <- h*area_sum/2
+              return (new("trapezoid", x = x, y = y, area = area))
             } else if (identical(rule, "Simpson")){
               area_sum <- 0
               for (i in 1:length(y)){
@@ -46,6 +47,6 @@ setMethod("integrateIt",
               }
               area_sum <- area_sum - a - b
               area <- area_sum*h/3
+              return (new("simpson", x = x, y = y, area = area))
             }
-            return (new("trapezoid", x = x, y = y, area = area))
           })
