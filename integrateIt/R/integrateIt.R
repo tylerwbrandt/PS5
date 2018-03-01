@@ -37,6 +37,9 @@ setMethod("integrateIt",
               area <- h*area_sum/2
               return (new("trapezoid", x = x, y = y, area = area))
             } else if (identical(rule, "Simpson")){
+              if (h %% 2 == 0){
+                return ("Error: x,y must be of odd length for integrateIt to work with rule 'Simpson' ")
+              }
               area_sum <- 0
               for (i in 1:length(y)){
                 if (i %% 2 == 0){
