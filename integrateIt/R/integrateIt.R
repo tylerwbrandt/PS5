@@ -4,6 +4,7 @@
 #'
 #' @param x A numeric object
 #' @param y A numeric object with the same dimensionality as \code{x}.
+#' @param rule A string equal to either "Trap" or "Simpson"
 #'
 #' @return An object of class Squares containing
 #'  \item{x}{The first object input}
@@ -15,8 +16,7 @@
 #' 
 #' myX <- c(20, 3) 
 #' myY <- c(-2, 4.1) 
-#' addSquares(myX, myY)
-#' @seealso \code{\link{subtractSquares}}
-#' @rdname addSquares
-#' @aliases addSquares,ANY-method
+#' integrateIt(myX, myY)
+#' @rdname integrateIt
+#' @aliases integrateIt
 #' @export
