@@ -14,6 +14,16 @@
 #' @aliases trapezoid-class initialize
 #' @rdname trapezoid
 #' @export
-
+setClass(class = "trapezoid",
+         representation = representation(
+           height = "numeric",
+           base1 = "numeric",
+           base2 = "numeric"
+         ),
+         prototype = prototype(
+           height = c(),
+           base1 = c(),
+           base2 = c()
+         ))
 
 
