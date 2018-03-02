@@ -30,7 +30,7 @@ setMethod("integrateIt",
           definition = function(x, y, rule, ...){
             a <- min(x)
             b <- max(x)
-            h <- (b-a)/length(x)
+            h <- (b-a)/(length(x)-1)
             x_sorted <- sort(x)
             if (identical(rule, "Trap")){
               area_sum <- sum(2*y)-a-b
