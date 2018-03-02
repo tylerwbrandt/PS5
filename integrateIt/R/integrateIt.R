@@ -28,15 +28,23 @@ setGeneric(name = "integrateIt",
 #' @export
 setMethod("integrateIt",
           definition = function(x, y, rule, ...){
+            # ensure that the value of x are increasing
             for (i in 2:length(x)){
               if (x[i] < x[i-1]){
                 stop("x must be an increasing set")
               }
             }
+            # set up uniform length of intervals
             a <- min(x)
             b <- max(x)
             h <- (b-a)/(length(x)-1)
             x_sorted <- sort(x)
+            # ensure uniform length of intervals
+            for (i in 2:length(x)){
+              if (x[i] - h != x[i-1]){
+                stop ("must have uniform interval lengths in x")
+              }
+            }
             if (identical(rule, "Trap")){
               area_sum <- sum(2*y)-y[1]-y[length(y)]
               area <- h*area_sum/2
