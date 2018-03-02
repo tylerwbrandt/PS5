@@ -33,7 +33,7 @@ setMethod("integrateIt",
             h <- (b-a)/(length(x)-1)
             x_sorted <- sort(x)
             if (identical(rule, "Trap")){
-              area_sum <- sum(2*y)-a-b
+              area_sum <- sum(2*y)-y[1]-y[length(y)]
               area <- h*area_sum/2
               return (new("trapezoid", x = x, y = y, area = area))
             } else if (identical(rule, "Simpson")){
