@@ -62,7 +62,7 @@ setMethod("integrateIt",
                   area_sum <- area_sum + 2*y[i]
                 }
               }
-              area_sum <- area_sum - a - b
+              area_sum <- area_sum - y[1] - y[length(y)]
               area <- area_sum*h/3
               return (new("simpson", x = x, y = y, area = area))
             }
