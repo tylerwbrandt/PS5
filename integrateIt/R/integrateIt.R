@@ -45,13 +45,14 @@ setMethod("integrateIt",
                 stop ("must have uniform interval lengths in x")
               }
             }
+            # Calculate Trapezoid area
             if (identical(rule, "Trap")){
               area_sum <- sum(2*y)-y[1]-y[length(y)]
               area <- h*area_sum/2
               return (new("trapezoid", x = x, y = y, area = area))
-            } else if (identical(rule, "Simpson")){
+            } else if (identical(rule, "Simpson")){ # Calculate Simpson area
               if (h %% 2 == 0){
-                return ("Error: x,y must be of odd length for integrateIt to work with rule 'Simpson' ")
+                stop ("x,y must be of odd length for integrateIt to work with rule 'Simpson' ")
               }
               area_sum <- 0
               for (i in 1:length(y)){
