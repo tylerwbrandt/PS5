@@ -28,6 +28,11 @@ setGeneric(name = "integrateIt",
 #' @export
 setMethod("integrateIt",
           definition = function(x, y, rule, ...){
+            for (i in 2:length(x)){
+              if (x[i] < x[i-1]){
+                stop("x must be an increasing set")
+              }
+            }
             a <- min(x)
             b <- max(x)
             h <- (b-a)/(length(x)-1)
