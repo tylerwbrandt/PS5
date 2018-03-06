@@ -21,11 +21,11 @@ test_that ("x is increasing and intervals are of uniform length", {
 context("make sure it integrates properly")
 
 test_that("trapezoid rule works properly", {
-  expect_equal(print(integrateIt(c(1,2,3),c(4,5,6),"Trap")), 10)
+  expect_equal(integrateIt(c(1,2,3),c(4,5,6),"Trap")@area, 10)
 })
 
 test_that("simpson rule works properly", {
-  expect_equal(print(integrateIt(c(1,2,3),c(4,5,6),"Simpson")), 10)
+  expect_equal(integrateIt(c(1,2,3),c(4,5,6),"Simpson")@area, 10)
 })
 
 context("simpson particulars")
