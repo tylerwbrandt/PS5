@@ -1,4 +1,4 @@
-#' A simpson object
+#' An object created by using simpson method of integration on a curve.
 #' 
 #' Object of class \code{simpson} are created by the \code{integrateIt} function
 #' 

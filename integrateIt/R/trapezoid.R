@@ -1,4 +1,4 @@
-#' A trapezoid object
+#' An object created by using trapezoid method of integration on a curve.
 #' 
 #' Object of class \code{trapezoid} are created by the \code{integrateIt} function
 #' 
