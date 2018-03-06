@@ -13,3 +13,13 @@ current.code <- as.package("integrateIt")
 load_all(current.code)
 document(current.code)
 test(current.code)
+
+
+## View of function
+integrateIt
+
+## Examples of function
+x <- c(1,2,3)
+y <- c(1,2,3)
+integrateIt(x,y,"trap")
+integrateIt(x,y,"simpson")
