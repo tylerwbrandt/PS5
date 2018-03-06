@@ -20,6 +20,6 @@ integrateIt
 
 ## Examples of function
 x <- c(1,2,3)
-y <- c(1,2,3)
-integrateIt(x,y,"trap")
-integrateIt(x,y,"simpson")
+y <- c(4,5,6)
+integrateIt(x,y,"Trap")
+integrateIt(x,y,"Simpson")
