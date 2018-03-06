@@ -23,3 +23,19 @@ x <- c(1,2,3)
 y <- c(4,5,6)
 integrateIt(x,y,"Trap")
 integrateIt(x,y,"Simpson")
+
+## Potential errors
+# x must be a numeric vector
+x1 <- c("h","j","k")
+integrateIt(x1,y,"Trap")
+
+# y must be a numeric vector
+y1 <- c("a","b","c")
+integrateIt(x,y1, "Trap")
+
+# x and y must be of the same length
+x2 <- c(1,2,3)
+y2 <- c(4,5)
+integrateIt(x2,y2, "Simpson")
+
+# 
