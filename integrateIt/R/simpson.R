@@ -33,3 +33,8 @@ setMethod("initialize", "simpson",
             return (value)
           })
 
+#' @export
+setMethod("print", "simpson",
+          function(x){
+            print(x)
+          })
