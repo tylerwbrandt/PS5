@@ -4,7 +4,7 @@
 \name{simpson-class}
 \alias{simpson-class}
 \alias{initialize}
-\title{A simpson object}
+\title{An object created by using simpson method of integration on a curve.}
 \description{
 Object of class \code{simpson} are created by the \code{integrateIt} function
 }

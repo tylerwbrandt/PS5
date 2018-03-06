@@ -4,7 +4,7 @@
 \name{trapezoid-class}
 \alias{trapezoid-class}
 \alias{initialize}
-\title{A trapezoid object}
+\title{An object created by using trapezoid method of integration on a curve.}
 \description{
 Object of class \code{trapezoid} are created by the \code{integrateIt} function
 }
