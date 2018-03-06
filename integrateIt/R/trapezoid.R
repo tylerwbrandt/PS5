@@ -33,3 +33,8 @@ setMethod("initialize", "trapezoid",
             return (value)
           })
 
+#' @export
+setMethod("print", "trapezoid",
+          function(x){
+            print (x)
+          })
