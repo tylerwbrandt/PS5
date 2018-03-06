@@ -28,6 +28,22 @@ setGeneric(name = "integrateIt",
 #' @export
 setMethod("integrateIt",
           definition = function(x, y, rule, ...){
+            # ensure that x is a numeric
+            if (class(x)) != "numeric"{
+              stop ("x must be a numeric vector")
+            }
+            # ensure that y is a numeric
+            if (class(y)) != "numeric"{
+              stop ("y must be a numeric vector")
+            }
+            # ensure that x and y have the same length
+            if (length(x) != length(y)){
+              stop ("x and y must be of the same length")
+            }
+            # ensure that rule is either Trap or Simpson
+            if (rule != "Trap" & rule != "Simpson"){
+              stop ("rule must be either 'Trap' or 'Simpson'")
+            }
             # ensure that the value of x are increasing
             for (i in 2:length(x)){
               if (x[i] < x[i-1]){
