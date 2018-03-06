@@ -29,11 +29,11 @@ setGeneric(name = "integrateIt",
 setMethod("integrateIt",
           definition = function(x, y, rule, ...){
             # ensure that x is a numeric
-            if (class(x)) != "numeric"{
+            if (class(x) != "numeric"){
               stop ("x must be a numeric vector")
             }
             # ensure that y is a numeric
-            if (class(y)) != "numeric"{
+            if (class(y) != "numeric"){
               stop ("y must be a numeric vector")
             }
             # ensure that x and y have the same length
