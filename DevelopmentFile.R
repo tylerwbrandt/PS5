@@ -46,7 +46,7 @@ integrateIt(x,y, "neither")
 x3 <- (1:10)
 y3 <- exp(-x^2)
 integrateIt(x3, y3, "Trap")
-integrateIt(x3, y3, "Simpson")
+integrateIt(x3, y3, "Simpson") # not necessarily the same as when using "Trap"
 
 ## Print methods yield just the area
 print(integrateIt(x3, y3, "Trap"))
