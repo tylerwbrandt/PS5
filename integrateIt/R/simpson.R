@@ -36,5 +36,5 @@ setMethod("initialize", "simpson",
 #' @export
 setMethod("print", "simpson",
           function(x){
-            print(x)
+            print(x @ area)
           })

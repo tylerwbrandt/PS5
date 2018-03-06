@@ -36,5 +36,5 @@ setMethod("initialize", "trapezoid",
 #' @export
 setMethod("print", "trapezoid",
           function(x){
-            print (x)
+            print (x @ area)
           })
