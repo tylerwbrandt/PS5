@@ -27,3 +27,9 @@ test_that("trapezoid rule works properly"){
 test_that("simpson rule works properly"){
   expect_equal(integrateIt(c(1,2,3),c(4,5,6),"Simpson"), 10)
 }
+
+context("simpson particulars")
+
+test_that("simpson requires odd length"){
+  expect_error(integrateIt(c(1,2,3,4),c(5,6,7,8),"Simpson"))
+}
